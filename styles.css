@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+:root {
+  --primary-pale-blue: hsl(225, 100%, 94%);
+  --primary-bright-blue: hsl(245, 75%, 52%);
+  --neutral-very-pale-blue: hsl(225, 100%, 98%);
+  --neutral-desaturated-blue: hsl(224, 23%, 55%);
+  --neutral-dark-blue: hsl(223, 47%, 23%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-family: 'Red Hat Display', sans-serif;
+}
+
+body {
+  background-image: url('./images/pattern-background-desktop.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: var(--neutral-very-pale-blue);
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  width: 400px;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+  background-color: #fff;
+  border: none;
+  border-radius: 20px;
+  /* position: relative; */
+  /* padding-top: 75px; */
+}
+
+#hero-img {
+  max-width: 100%;
+  margin-top: -35px;
+  /* position: absolute; */
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.container-text {
+  margin: 10px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container-text h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.container-text p {
+  width: 50%;
+  font-size: 12px;
+  color: var(--neutral-desaturated-blue);
+}
+
+.annual-plan {
+  background-color: var(--neutral-very-pale-blue);
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 75%;
+}
+
+.annual-plan-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.annual-plan-info img {
+  width: 35px;
+  height: 35px;
+}
+
+#change {
+  font-weight: bold;
+}
+
+.btn-payment {
+  margin: 10px 0px;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  width: 75%;
+  background-color: var(--primary-bright-blue);
+  color: white;
+  box-shadow: 0px 7px 11px 4px #9C9C9C;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-payment:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  background-color: hsl(245, 50%, 52%);
+}
+
+.cancel {
+  text-decoration: none;
+  color: var(--neutral-desaturated-blue);
+}
+
+/* Media Queries */
+
+@media (max-width: 768px) {
+  .container {
+    width: 80%;
+  }
+
+  .container-text p {
+    width: 80%;
+  }
+
+  .annual-plan-info { 
+    font-size: 8px;
+  }
+}
